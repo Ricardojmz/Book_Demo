@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.book_demo">
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/libro"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".PdfView"
+            android:exported="false" />
+        <activity
+            android:name=".Recuperar_Pass"
+            android:exported="false" />
+        <activity
+            android:name=".Inicio"
+            android:exported="false" />
+        <activity
+            android:name=".Registro"
+            android:exported="false" />
+        <activity
+            android:name=".ViewPager"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".PdfDetail"
+            android:exported="false" />
+        <activity
+            android:name=".PdfList"
+            android:exported="false" />
+        <activity
+            android:name=".Dashboard"
+            android:exported="false" />
+        <activity
+            android:name=".Categorias"
+            android:exported="false" />
+        <activity
+            android:name=".Cargar_PDF"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+</manifest>

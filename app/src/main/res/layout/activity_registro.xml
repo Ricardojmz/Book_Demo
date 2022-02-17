@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Se cambia a Linear Layout para ser de forma vertical para ordenar
+los controladores respecto al ancho y alto que tenga el dispositivo-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="25dp"
+    tools:context=".Registro">
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BOOK DEMO"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30dp"
+        android:layout_gravity="left"/>
+    <TextView
+        android:id="@+id/registro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="Registro de Usuario"
+        android:textColor="#FF0088A3"
+        android:textSize="20sp"
+        android:layout_marginTop="28dp"
+        android:textStyle="bold"
+        android:transitionName="TextUsuario"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="14dp"
+        android:orientation="vertical">
+        <!--Campo Nombre-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/campo_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:transitionName="TextUsuario1"
+            android:textColorHint="@color/design_default_color_secondary_variant"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Campo_Nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--Campo Apellido Paterno-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/campo_Apaterno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Apellido Paterno"
+            android:transitionName="TextName"
+            android:textColorHint="@color/design_default_color_secondary_variant"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Campo_Apaterno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--Campo Email-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/campo_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo Electronico"
+            android:textColorHint="@color/design_default_color_secondary_variant"
+            android:transitionName="EmailInputTextTrans"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/EmailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--Campo Password-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/campo_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:transitionName="PaswordInputTextTrans"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/design_default_color_secondary_variant"
+            android:textColorHint="@color/design_default_color_secondary_variant"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/PasswordEdittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--Confirmar Password-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/campo_ConfPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirmar Contraseña"
+            app:passwordToggleEnabled="true"
+            android:transitionName="NewUserTrans1"
+            app:passwordToggleTint="@color/design_default_color_secondary_variant"
+            android:textColorHint="@color/design_default_color_secondary_variant"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ConfPassEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/registrar_usu"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="REGISTRAR"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="70dp"
+            android:transitionName="ButtonSingInTrans"/>
+        <TextView
+            android:id="@+id/regresar"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/background_dark"
+            android:layout_gravity="end"
+            android:fontFamily="monospace"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Regresar"
+            android:transitionName="NewUserTrans"/>
+    </LinearLayout>
+
+</LinearLayout>

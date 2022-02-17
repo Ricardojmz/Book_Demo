@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PdfList">
+
+    <!--Toolbar-->
+    <RelativeLayout
+        android:id="@+id/RLToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/shape_button1">
+
+        <ImageButton
+            android:id="@+id/Back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_backo" />
+
+        <TextView
+            android:id="@+id/TVBooks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="Libros"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/TvSubBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Categoria"
+            android:textColor="@color/white"
+            android:layout_below="@id/TVBooks"/>
+    </RelativeLayout>
+    <!--Search-->
+    <EditText
+        android:id="@+id/EtSearchBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RLToolbar"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/lupa"
+        android:hint="Buscar"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <!--pdf list-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Recycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/EtSearchBook"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/row_pdf" />
+
+</RelativeLayout>

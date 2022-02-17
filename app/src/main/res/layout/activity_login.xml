@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Se cambia a Linear Layout para ser de forma vertical para ordenar
+los controladores respecto al ancho y alto que tenga el dispositivo-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:orientation="vertical"
+    tools:context=".Login">
+    <!--Propiedades del texto LOGIN encabezado para la App-->
+    <TextView
+        android:id="@+id/encabezado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BOOK DEMO"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#FF0088A3"
+        android:layout_marginBottom="10dp"
+        android:transitionName="NewUserTrans" />
+    <!--Propiedades para la imagen-->
+    <ImageView
+        android:id="@+id/librogif"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/librogif"
+        android:transitionName="LogoImageTrans" />
+    <!--Propiedades para el texto-->
+    <TextView
+        android:id="@+id/continuar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Inicia sesión para continuar"
+        android:textSize="20sp"
+        android:textColor="#FF0088A3"
+        android:fontFamily="serif"
+        android:transitionName="TextUsuario1"/>
+    <!--Propiedades de Campo Email-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="14dp"
+        android:orientation="vertical">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:id="@+id/Email"
+            android:hint="Correo Electronico"
+            android:transitionName="EmailInputTextTrans"
+            android:textColorHint="@color/design_default_color_secondary_variant"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/EmailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Propiedades del Campo Password-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/Password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:hint="Contraseña"
+            android:textColorHint="@color/design_default_color_secondary_variant"
+            android:transitionName="PaswordInputTextTrans"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/design_default_color_secondary_variant">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/PasswordEdittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary"
+                android:fontFamily="monospace"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--Propiedades para el texto Olvido Contraseña-->
+        <TextView
+            android:id="@+id/olvidaste_pass"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/background_dark"
+            android:layout_gravity="end"
+            android:fontFamily="monospace"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Olvidaste tu contraseña?"
+            android:transitionName="TextName"/>
+
+        <!--Propiedades para el boton Login-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/inicio_sesion"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="INICIO"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:transitionName="ButtonSingInTrans"/>
+        <!--Propiedades para el bóton de Inicio con Google-->
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/LoginGoogle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="2dp" />
+        <!--Propiedades para el texto Registrarse-->
+        <TextView
+            android:id="@+id/btn_registrar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="monospace"
+            android:text="Registrarse"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:transitionName="NewUserTrans1"/>
+        <!--Propiedades para la imagen GIF-->
+        <ImageView
+            android:id="@+id/cubo"
+            android:layout_width="180sp"
+            android:layout_height="180sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:transitionName="NewUserTrans"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:layout_marginTop="50dp"
+    tools:context=".Fragment.Home">
+
+    <RelativeLayout
+        android:id="@+id/ul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="#FF0088A3">
+
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#FF0088A3"
+        android:src="@drawable/book_demo" />
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/imagen"
+            android:layout_centerInParent="true"
+            android:background="#FF0088A3"
+            android:clipToPadding="false"
+            android:foregroundGravity="center"
+            android:overScrollMode="never" />
+</RelativeLayout>
+
+</LinearLayout>
